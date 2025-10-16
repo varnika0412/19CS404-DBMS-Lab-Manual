@@ -107,7 +107,7 @@ CREATE TABLE Table_Name (
 *Question 1*
 --
 ![image](https://github.com/user-attachments/assets/a96ca725-91db-4ea8-bcdf-dcc5eef9d6e4)
-
+```
 sql
 CREATE TABLE contacts(
 contact_id INTEGER primary key,
@@ -117,7 +117,7 @@ email TEXT,
 phone TEXT not NULL CHECK(LENGTH(phone)>=10)
 );
 
-
+```
 *Output:*
 
 ![image](https://github.com/user-attachments/assets/fe1083f2-ee2c-4a61-bbb9-17021b66ce35)
