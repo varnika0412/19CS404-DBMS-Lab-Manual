@@ -11,46 +11,56 @@ These are three type of INSERT INTO queries which are as
 A)Inserting a single record
 *Syntax (Single Row):*
 sql
+```
 INSERT INTO table_name (field_1, field_2, ...) VALUES (value_1, value_2, ...);
-
+```
 *Syntax (Multiple Rows):*
 sql
+```
 INSERT INTO table_name (field_1, field_2, ...) VALUES
 (value_1, value_2, ...),
 (value_3, value_4, ...);
-
+```
 *Syntax (Insert from another table):*
 sql
+```
 INSERT INTO table_name SELECT * FROM other_table WHERE condition;
-
+```
 ### 2. UPDATE
 Used to modify records in a relation.
 Syntax:
 sql
+```
 UPDATE table_name SET column1 = value1, column2 = value2 WHERE condition;
-
+```
 ### 3. DELETE
 Used to delete records from a relation.
 *Syntax (All rows):*
 sql
+```
 DELETE FROM table_name;
-
+```
 *Syntax (Specific condition):*
 sql
+```
 DELETE FROM table_name WHERE condition;
+```
 
 ### 4. SELECT
 Used to retrieve records from a table.
 *Syntax:*
 sql
+```
 SELECT column1, column2 FROM table_name WHERE condition;
-
+```
 *Question 1*
 --
 ![image](https://github.com/user-attachments/assets/4edfbe94-d2a2-4790-aaac-56760b245cb8)
 
 sql
+```
 UPDATE Products SET quantity=(quantity*1.10);
+```
 
 
 *Output:*
@@ -63,8 +73,9 @@ UPDATE Products SET quantity=(quantity*1.10);
 
 
 sql
+```
 UPDATE Employees SET first_name='John' WHERE department_id=80 AND commission_pct<0.35;
-
+```
 
 *Output:*
 
@@ -77,8 +88,9 @@ UPDATE Employees SET first_name='John' WHERE department_id=80 AND commission_pct
 
 
 sql
+```
 UPDATE Employees SET email='not available',commission_pct=0.55 WHERE department_id=110;
-
+```
 
 *Output:*
 
@@ -91,8 +103,9 @@ UPDATE Employees SET email='not available',commission_pct=0.55 WHERE department_
 
 
 sql
+```
 UPDATE Employees SET salary=8000 WHERE employee_id=105 AND salary<5000;
-
+```
 
 *Output:*
 
@@ -105,8 +118,9 @@ UPDATE Employees SET salary=8000 WHERE employee_id=105 AND salary<5000;
 
 
 sql
+```
 UPDATE Employees SET salary=salary*2 WHERE department_id=20 AND job_id like '%MAN';
-
+```
 
 *Output:*
 
@@ -119,8 +133,9 @@ UPDATE Employees SET salary=salary*2 WHERE department_id=20 AND job_id like '%MA
 
 
 sql
+```
 DELETE FROM Doctors WHERE doctor_id=1;
-
+```
 
 *Output:*
 
@@ -133,8 +148,9 @@ DELETE FROM Doctors WHERE doctor_id=1;
 
 
 sql
+```
 DELETE FROM Customer WHERE GRADE=2;
-
+```
 
 *Output:*
 
@@ -147,8 +163,9 @@ DELETE FROM Customer WHERE GRADE=2;
 
 
 sql
+```
 DELETE FROM Surgeries WHERE surgery_id=3 OR surgeon_id=4;
-
+```
 
 *Output:*
 
@@ -160,8 +177,9 @@ DELETE FROM Surgeries WHERE surgery_id=3 OR surgeon_id=4;
 ![image](https://github.com/user-attachments/assets/a9eb0580-b7a2-42cf-a238-d7f8724f3462)
 
 sql
+```
 DELETE FROM Doctors WHERE last_name is NULL;
-
+```
 
 *Output:*
 
@@ -174,8 +192,9 @@ DELETE FROM Doctors WHERE last_name is NULL;
 
 
 sql
+```
 DELETE FROM Customer WHERE WORKING_AREA='New York';
-
+```
 
 *Output:*
 
