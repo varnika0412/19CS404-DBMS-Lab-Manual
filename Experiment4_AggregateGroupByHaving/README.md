@@ -42,10 +42,11 @@ HAVING condition;
 
 
 sql
+```
 SELECT InsuranceCompany,COUNT(*) AS TotalPatients 
 FROM Insurance 
 GROUP BY InsuranceCompany;
-
+```
 
 *Output:*
 
@@ -58,10 +59,11 @@ GROUP BY InsuranceCompany;
 
 
 sql
+```
 SELECT PatientID,COUNT(*) AS TotalRecords
 FROM MedicalRecords
 GROUP BY PatientID;
-
+```
 
 *Output:*
 
@@ -74,10 +76,11 @@ GROUP BY PatientID;
 
 
 sql
+```
 SELECT Medication,COUNT(*) AS TotalPrescriptions
 FROM Prescriptions
 GROUP BY Medication;
-
+```
 
 *Output:*
 
@@ -90,9 +93,10 @@ GROUP BY Medication;
 
 
 sql
+```
 SELECT AVG(LENGTH(email)) AS avg_email_length 
 FROM customer;
-
+```
 
 *Output:*
 
@@ -105,9 +109,10 @@ FROM customer;
 
 
 sql
+```
 SELECT SUM(purch_amt) AS TOTAL
 FROM orders;
-
+```
 
 *Output:*
 
@@ -120,10 +125,11 @@ FROM orders;
 
 
 sql
+```
 SELECT MAX(price)-MIN(price) AS price_diff
 FROM fruits;
 
-
+```
 *Output:*
 
 ![image](https://github.com/user-attachments/assets/aca7c661-fb23-4d0a-a799-5720e5844a3c)
@@ -135,11 +141,12 @@ FROM fruits;
 
 
 sql
+```
 SELECT AVG(income) AS avg_income
 FROM employee
 WHERE name LIKE 'A%';
 
-
+```
 *Output:*
 
 ![image](https://github.com/user-attachments/assets/346b8ed8-58d3-45ed-99cc-688d8505145a)
@@ -151,11 +158,12 @@ WHERE name LIKE 'A%';
 
 
 sql
+```
 SELECT (age/5)*5 AS age_group,MAX(salary)
 FROM customer1
 GROUP BY (age/5)*5
 HAVING MAX(salary)>8000;
-
+```
 
 *Output:*
 
@@ -168,10 +176,11 @@ HAVING MAX(salary)>8000;
 
 
 sql
+```
 SELECT occupation,MIN(workhour) 
 FROM employee1
 GROUP BY occupation HAVING MIN(workhour)>8;
-
+```
 
 *Output:*
 
@@ -184,11 +193,12 @@ GROUP BY occupation HAVING MIN(workhour)>8;
 
 
 sql
+```
 SELECT city,SUM(Income) AS Income 
 FROM employee 
 GROUP BY city
 HAVING SUM(Income)>200000;
-
+```
 
 *Output:*
 
